@@ -1,0 +1,54 @@
+mixin b-footer()
+	+b.FOOTER.footer
+		.container
+			+e.row
+				+e.col_1
+					+b.A(href="https://sunnygeorgia.travel/" target="_blank").logo_footer
+						+e.IMG.img(src="img/logo.svg")
+					+b.box-simple_copyright © 2018 Sunny Georgia Travel All Rights reserved.
+
+				+e.col_2
+					+b.NAV.nav(class="_footer" id="nav__footer")
+						+e.UL.list#nav-list_footer
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/qa" target="_blank") Вопрос/ответ
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/contacts" target="_blank") Контакты
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/rules" target="_blank") Правила и условия
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/about" target="_blank") О компании
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/terms" target="_blank") Договор оферты
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/be-partner" target="_blank") Станьте партнером
+
+				+e.col_3
+					+b.box-simple_img-payment-systems 
+						+e.IMG(src="img/tbc_bank_logo.svg").img
+						+e.IMG(src="img/visa_logo.svg").img
+						+e.IMG(src="img/mc-logo.svg").img
+					+b.social-btn
+						+e.A(href="https://www.facebook.com/SunnyGeorgia.Travel/" target="_blank").link
+							I.icon.icon-facebook
+						+e.A(href="https://vk.com/sunnygeorgia.travel/" target="_blank").link
+							I.icon.icon-vk
+						+e.A(href="https://www.instagram.com/sunnygeorgia.travel/" target="_blank").link
+							I.icon.icon-instagram
+						+e.A(href="https://ok.ru/group/54547512623220/" target="_blank").link
+							I.icon.icon-odnoklassniki
+
+mixin b-footer_en()
+	+b.FOOTER.footer_en
+		.container
+			+e.row
+				+e.col_1
+					+b.A(href="https://sunnygeorgia.travel/" target="_blank").logo_footer
+						+e.IMG.img(src="img/logo.svg")
+					+b.box-simple_copyright © 2018 Sunny Georgia Travel All Rights reserved.
+
+				+e.col_2
+					+b.box-simple_img-payment-systems 
+						+e.IMG(src="img/tbc_bank_logo.svg").img
+						+e.IMG(src="img/visa_logo.svg").img
+						+e.IMG(src="img/mc-logo.svg").img

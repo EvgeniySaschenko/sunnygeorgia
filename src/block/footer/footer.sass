@@ -1,0 +1,50 @@
+.footer
+	background-image: url(../img/bg-footer.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	padding: 60px 0 40px
+	margin-top: 100px
+	font-size: 12px
+	&__row
+		display: flex
+		@media #{$tablet}
+			flex-wrap: wrap
+			justify-content: center
+	&__col
+		&_1
+			width: 30%
+			@media #{$tablet}
+				width: 40%
+				text-align: center
+			@media #{$phone}
+				order: 1
+		&_2
+			width: 40%
+			display: flex
+			@media #{$phone}
+				order: -1
+				text-align: center
+				justify-content: center
+
+		&_3
+			width: 30%
+			text-align: right
+			@media #{$tablet}
+				width: 100%
+				margin-top: 20px
+				text-align: center
+
+		@media #{$phone}
+			width: 100%
+			margin-top: 20px
+	&_en
+		.footer
+			&__row
+				justify-content: space-between
+			&__col
+				width: auto
+				@media #{$phone}
+					order: 0
+					width: 100%
+					

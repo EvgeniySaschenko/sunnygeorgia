@@ -1,0 +1,105 @@
+include ../../node_modules/bemto.pug/bemto.pug
+include ../block/index
+
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		// Google Tag Manager
+		script.
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-PML3RJN');
+		// End Google Tag Manager
+		
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		block meta_d
+		block title
+		block meta_og_title
+		block meta_og_type
+		block meta_og_description
+		block meta_og_url
+		block meta_og_image
+		
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|PT+Sans:400,700&subset=cyrillic")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.css")
+		link(rel="stylesheet", href="vendor/sprite/sprite.css")
+		link(rel="stylesheet", href="css/style.css")
+	body
+		// Google Tag Manager (noscript)
+		noscript
+			iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-PML3RJN', height='0', width='0', style='display:none;visibility:hidden')
+		// End Google Tag Manager (noscrip
+
+		style.
+			.preloader{
+				min-height: 100vh;
+				height: 100%;
+				width: 100%;
+				background-color: rgb(255,255,255);
+				color: rgb(36,111,176);
+				font-size: 45px;
+				font-family:  Arial, sans-serif;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				position: fixed;
+				top: 0;
+				left: 0;
+				transition-duration: 1s;
+				display: none;
+				z-index: 10000;
+			}
+			.preloader.noload{
+			display: flex;
+			}
+			.preloader__text_1{
+			font-size: 45px;
+			}
+			.preloader__text_2{
+			font-size: 20px;
+			}
+			.wrapper.noload{
+			display: none;
+			}
+		//- script.
+		//- 	document.addEventListener("DOMContentLoaded", function(){
+		//- 		document.querySelector('.preloader').classList.remove('noload');
+		//- 	});
+
+		.preloader
+			//- .preloader__text_1 Loading
+			//- IMG(src="img/preloader.gif")
+		.wrapper
+			//- script.
+			//- 	document.querySelector('.preloader').classList.add('noload');
+
+			+b-header_en()
+			block main
+				+b.MAIN.main
+			+b.modal_send-order(id="modal_send-order")
+				+b.FORM(method="POST" data-lang="en").form_modal-send-order#form_modal-send-order
+					+e.modal-close
+					+e.item
+						+e.title Send us a request, we will call you back
+					+e.item
+						+e.INPUT.field(name="name" placeholder="Name*" required="required")
+					+e.item
+						+e.INPUT.field(name="phone" placeholder="Phone*" required="required")
+					+e.item
+						+e.INPUT.btn(type="submit" value="Send request").btn_send
+
+			+b-footer_en()
+
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/ru.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js")
+			script(src="js/app.js")

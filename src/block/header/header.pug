@@ -1,0 +1,32 @@
+mixin b-header()
+	+b.HEADER.header
+		.container
+			+e.row
+				+e.col_1
+					+b.A(href="https://sunnygeorgia.travel/ru" target="_blank").logo_header
+						+e.IMG.img(src="img/logo.svg")
+				+e.col_2
+					//+b.BUTTON.btn_burger-header(id="btn_burger-header" data-id-control="nav__header")
+							+e.item
+					+b.NAV.nav(class="_header" id="nav__header")
+						+e.UL.list#nav-list_header
+							//+e.LI.item
+									+e.A.link(href="#") Направления
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/tours" target="_blank") Туры
+							+e.LI.item
+								+e.A.link(href="https://sunnygeorgia.travel/ru/excursions" target="_blank") Экскурсии
+					+b.switch-lang
+						+e.A(href="/index-en.html").item EN
+						+e.A(href="/index.html").item RU
+mixin b-header_en()
+	+b.HEADER.header_en
+		.container
+			+e.row
+				+e.col_1
+					+b.logo_header
+						+e.IMG.img(src="img/logo.svg")
+				+e.col_2
+					+b.switch-lang
+						+e.A(href="/index-en.html").item EN
+						+e.A(href="/index.html").item RU

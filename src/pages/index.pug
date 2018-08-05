@@ -1,0 +1,365 @@
+extends ../layout/root
+
+block title 
+	title Sunnygeorgia
+block meta_d 
+	meta(name="description" content="В этой эксурсии вы увидите красоты горной аджарии, известный водопад Мухунцети и тысячелетный мост, построенный во времена царицы Тамары. Далее мы посетим винный дом, где пройдет ланч/обед и дегустация вин из местных сортов винограда.")
+block meta_og_title
+	meta(property="og:title" content="Sunnygeorgia")
+block meta_og_type
+	meta(property="og:type" content="website")
+block meta_og_description
+	meta(property="og:description" content="В этой эксурсии вы увидите красоты горной аджарии, известный водопад Мухунцети и тысячелетный мост, построенный во времена царицы Тамары. Далее мы посетим винный дом, где пройдет ланч/обед и дегустация вин из местных сортов винограда.")
+block meta_og_url
+	meta(property="og:url" content="http://excursion-vodopad.sunnygeorgia.travel/ru")
+block meta_og_image
+	meta(property="og:image" content="http://excursion-vodopad.sunnygeorgia.travel/ru/img/slide-2.jpg")
+
+block main
+	+b.content
+		+e.row_1
+			.container
+				// breadcrumbs
+				+b.breadcrumbs
+					+e.A(href="https://sunnygeorgia.travel/ru/excursions" target="_blank").item Экскурсии
+					+e.A(href="https://sunnygeorgia.travel/ru/places/batumi" target="_blank").item Батуми
+					+e.A(href="#" target="_blank").item Водопад в горной Аджарии, мост царицы Тамары и обед в винном доме 
+
+				+b.banner_top
+					+e.text_1 Экскурсия:
+					+e.text_2 Водопад в горной Аджарии, мост царицы Тамары и обед в винном доме <br>
+						I.icon.icon-location
+						SPAN Батуми
+
+			// slider
+			+b.slider_top
+				.swiper-wrapper
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-1.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-2.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-3.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-4.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-5.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-6.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-7.jpg").img
+				+e.pagination
+
+			.container
+				// form_callback
+				+b.FORM(method="POST").form_callback#form_callback
+					+e.item
+						+e.title Свяжитесь с нами:
+					+e.item
+						+e.INPUT.field(name="name" placeholder="Имя*" required="required")
+					+e.item
+						+e.INPUT.field(name="phone" placeholder="Мобильный*" required="required")
+					+e.item
+						+e.INPUT.btn(type="submit" value="Отправить заявку").btn_send
+
+			// tab
+			+b.tab
+				+e.list.container
+					+e.item(data-id="tab_1").active Описание
+					+e.item(data-id="tab_2") Детали
+					+e.item(data-id="tab_3") Маршрут
+					+e.item(data-id="tab_4") Отзывы
+				+e.box-content
+					+e.content(id="tab_1").active
+						+b.text-box_description.container
+							+e.item
+								+e.P.text В этой эксурсии вы увидите красоты горной аджарии, известный водопад Мухунцети и тысячелетный мост, построенный во времена царицы Тамары. Далее мы посетим винный дом, где пройдет ланч/обед и дегустация вин из местных сортов винограда.
+
+							+e.item
+								+e.name Начало экскурсии 
+								+e.mark
+								+e.P.text Экскурсия начинается в старом Батуми (пересечение В. Пшавела и М. Абашидзе 50), если Вы проживате неподалёку, то можете подойти на место сбора. Если нет, мы заберём вас у Вашего места жительства.
+
+							+e.item
+								+e.name 1 остановка
+								+e.mark
+								+e.P.text Затем мы направимся по трансаджарской дороге в сторону селения Кеда. Уже через 20 минут после выезда вы окажетесь на живописном горном серпантине. Первая остановка: водопад Мухунцети высотой около 30 метров. Там же неподалёку, в 5 минутах ходьбы находится мост царицы Тамары датируемы ~11 веком длинной 29 метров. Можно сделать оличные фото на память и приобрести различные сувениры, мёд и т.д.
+
+							+e.item
+								+e.name 2 остановка 
+									+e.SPAN.name_explanation (для экскурсии Все включено)
+								+e.mark
+								+e.P.text Далее мы направляемся в частное имение - винный дом Шервашидзе, который расположен в среди гор аджарии. Живописные пейзажи и гостеприимство хозяев не оставят вас равнодушными. Вы попробуете местные сорта вин с блюдами грузинской и аджарской кухни в атмосфере настоящего Грузинского коллорита. Здесь же вы сможете приобрести вино из местных сортов винограда и чачу.
+
+							+e.item
+								+e.name Дополнительно 
+								+e.mark
+								+e.P.text В имении есть Zip Line ( Зиплайн – на натянутом тросе закреплены движущиеся роллеры, с помощью которых можно добраться из пункта А в Б) длинной 160 метров. При желании можно полетать с ветерком над виноградниками за 5 GEL с человека.
+								+e.P.text Экскурсия заканчивается на площади Европы, в центре Батуми
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Экспресс
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name Все включено
+										+e.box
+											+e.type Взрослый:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Детский до 12 лет:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Детский до 6 лет:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-1") Забронировать
+
+					+e.content(id="tab_2")
+						+b.text-box_details.container
+							+e.item_mod-1
+								+e.name Детали:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Место начала экскурсии : М. Абашидзе 50 или заберём вас из отеля
+									+e.LI.list-item Экскурсия “Все включено” возможна при наборе от 5-ти человек ( максимум 9 чел.)
+									+e.LI.list-item Продолжительность часов: 3.5-5 часов
+									+e.LI.list-item Экскурсия “Экспресс” возможна при наборе от 10-ти человек  ( максимум 18 чел.)
+									+e.LI.list-item Длина маршрута: 90 км
+
+							+e.item
+								+e.name Трансфер:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Комфортабельный Mersedes-Benz Sprinter с кондиционером
+
+							+e.item
+								+e.name В стоимость входит:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Трансфер по маршруту
+									+e.LI.list-item Обед и дегустация в винном доме (только для экскурсии “Все включено”)
+									+e.LI.list-item Вода 0.5 л. на человека
+									+e.LI.list-item Internet в пути 
+									+e.LI.list-item Зарядное для Android/iPhone
+									+e.LI.list-item Хорошее настроение !
+
+							+e.item
+								+e.name В стоимость не входит:
+								+e.mark_alert
+								+e.UL.list
+									+e.LI.list-item Вино помимо дегустационного
+									+e.LI.list-item Зиплайн
+
+							+e.item
+								+e.name Меню обеда:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Рыба форель, шашлык, цыплёнок
+									+e.LI.list-item Баклажаны с орехами
+									+e.LI.list-item Хачапури
+									+e.LI.list-item Дошорва и синори (аджарские блюдо)
+									+e.LI.list-item Картошка фри
+									+e.LI.list-item Салат из огурцов и помидоров
+									+e.LI.list-item Хлеб, сыр, Овощи, ткемали соус, мчади (лепёшка из кукурузы), кофе
+									+e.LI.list-item Дегустация вин: Чхавери, Оджалеши, Цоликаури, Дирбула, чача.
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Экспресс
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name Все включено
+										+e.box
+											+e.type Взрослый:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Детский до 12 лет:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Детский до 6 лет:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-2") Забронировать
+
+
+					+e.content(id="tab_3")
+						+b.map
+							+e.IFRAME.iframe(src="https://www.google.com/maps/embed?pb=!1m30!1m8!1m3!1d190853.8607586013!2d41.6355079!3d41.632152!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x40678ab6ad650edd%3A0xa830ec130a4957a!2z0JLQuNC90L3Ri9C5INC_0L7Qs9GA0LXQsSDQqNC10YDQstCw0YjQuNC00LfQtSwgUGlydmVsaSBNYWlzaSwg0JPRgNGD0LfQuNGP!3m2!1d41.5885736!2d41.875042099999995!4m5!1s0x40678ad49a3aeb9d%3A0x6aad0f6d0ed6d203!2z0JLQvtC00L7Qv9Cw0LQg0JzQsNGF0YPQvdGG0LXRgtC4LCDQk9GA0YPQt9C40Y8!3m2!1d41.574895!2d41.8583393!4m5!1s0x40678640924393b9%3A0x9fdf92bcbc8b6f5b!2z0JzQtdC00LXRjywgQmF0dW1pLCDQk9GA0YPQt9C40Y8!3m2!1d41.651219!2d41.6364647!5e0!3m2!1sru!2sua!4v1530834854067")
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Экспресс
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name Все включено
+										+e.box
+											+e.type Взрослый:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Детский до 12 лет:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Детский до 6 лет:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-3") Забронировать
+
+
+					+e.content(id="tab_4")
+						+b.reviews.container
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/1.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Борис Сокол
+										+e.SPAN.date июль 01
+									+e.row_2
+										+e.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+									+e.row_3
+										+e.P.text Ездили с этой компанией на экскурсию в винный дом с заездом к водопаду Махунцети и на мост царицы. Очень понравилось, особенно дегустация местных вин под блюда аджарской кухни. Пальчики оближешь! Жаль что мы только под конец отдыха узнали об этой компании, а то обязательно поехали бы еще с ними.
+
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/2.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Олена Муха
+										+e.SPAN.date июль 01
+									+e.row_2
+										+e.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+									+e.row_3
+										+e.P.text Были на экскурсии по Батуми. Понравился гид, обстоятельно все рассказывал, можно было приставать с разными вопросами, умными и не очень. Я просто очень любознательная) В общем, спасибо за хорошую экскурсию и проявленное терпение!
+
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/3.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Ирина Давиденко
+										+e.SPAN.date июнь 10
+									+e.row_2
+										+e.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+									+e.row_3
+										+e.P.text Мы отдыхали в Батуми, и никогда не могли представить, что всего через 20 минут можно оказаться в параллельной реальности: горный серпантин, таинственный водопад и мост, которому 1000 лет. 
+										+e.P.text SunnyGeorgia.Travel организовали прекрасную экскурсию с легендами и интересными рассказами. Узнали много нового о Грузии и традициях этой страны. 
+										+e.P.text После насыщенной программы дегустация вин и очень вкусный обед в Винном доме было то, что нужно. Без сомнений теперь буду рекомендовать Вашу компанию.
+
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/4.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Сергей Хоменко
+										+e.SPAN.date июнь 09
+									+e.row_2
+										+e.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+									+e.row_3
+										+e.P.text Мені дуже сподобалася ця екскурсія. Особливо дегустація вин, я стільки нового для себе дізнався про сорти винограду і технологію виготовлення, що й уявити собі не міг. 
+										+e.P.text Ще дуже порадували зручні автобуси з інтернетом і підзарядкою для телефонів, бо я одразу поділився враженнями з усіма друзями! Буду рекомендувати вас!
+
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/5.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Ирина Шейко
+										+e.SPAN.date июнь 09
+									+e.row_2
+										+e.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star-not-active
+									+e.row_3
+										+e.P.text Кто бы мог подумать, что вокруг Батуми еще столько интересного. Первый раз в жизни увидела самый настоящий водопад! И дегустация в Винном доме - вне всякой конкуренции. Все было очень вкусно, а рассказ гида познавательным и интересным. Спасибо вам, ребята.
+
+							+e.item
+								+e.box-avatar
+									+e.IMG(src="img/avatar/8.jpg").img_avatar
+								+e.box-comment
+									+e.row_1
+										+e.SPAN.name Элина Литвинчук
+										+e.SPAN.date июнь 09
+									+e.row_2
+										+e.SPAN.rating
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+											I.icon.icon-star
+									+e.row_3
+										+e.P.text Мы ехали в Батуми отдохнуть на море, но хотелось побывать в интересных местах, а времени было совсем немного. В SunnyGeorgiaпредложили оптимальный вариант – экскурсия к мосту Царицы Тамары и водопаду, а также посещение винного дома. Экскурсия заняла полдня, но впечатлений хватит надолго: и завораживающий водопад, и мост с историей, и грузинская кухня. А от хозяина винного дома Вы останетесь в восторге и поймете, что значит грузинское гостеприимство.
+										
+						+b.btn_form-add-comment(id="btn_form-add-comment" data-id-control="form_add-comment") Добавить комметарий
+						+b.FORM.form_add-comment(id="form_add-comment" enctype="multipart/form-data")
+							+e.row_1
+							.container
+								+e.row_2
+									+e.notice Ваш комментарий будет добавлен после проверки модератором!
+								+e.row_3
+									+e.col
+										+e.INPUT(required="required" name="name" placeholder="Имя").field_name
+									+e.col
+										+e.INPUT(required="required" name="last_name" placeholder="Фамилия").field_last-name
+									+e.col
+										+e.LABEL(for="form__file_upload").label_upload Ваше фото
+										+e.INPUT(id="form__file_upload" required="required" type="file" name="photo" placeholder="Загрузить фото").file_upload
+								+e.row_4
+									+e.TEXTAREA(required="required" placeholder="Комментарий").textarea
+								+e.row_5
+									+e.rating-text Ваша оценка:
+									+e.rating
+										+e.LABEL(for="form__rating-item_1").rating-item_1
+											I.icon.icon-star
+										+e.INPUT(id="form__rating-item_1" type="radio" name="rating-star" value="1").rating-item-checkbox
+
+										+e.LABEL(for="form__rating-item_2").rating-item_2
+											I.icon.icon-star
+										+e.INPUT(id="form__rating-item_2" type="radio" name="rating-star" value="2").rating-item-checkbox
+
+										+e.LABEL(for="form__rating-item_3").rating-item_3
+											I.icon.icon-star
+										+e.INPUT(id="form__rating-item_3" type="radio" name="rating-star" value="3").rating-item-checkbox
+
+										+e.LABEL(for="form__rating-item_4").rating-item_4
+											I.icon.icon-star
+										+e.INPUT(id="form__rating-item_4" type="radio" name="rating-star" value="4").rating-item-checkbox
+
+										+e.LABEL(for="form__rating-item_5").rating-item_5
+											I.icon.icon-star
+										+e.INPUT(id="form__rating-item_5" type="radio" name="rating-star" value="5" checked="checked").rating-item-checkbox
+
+								+e.row_6
+									+e.INPUT.btn(type="submit" value="Добавить комментарий" id="form__btn_add-comment")

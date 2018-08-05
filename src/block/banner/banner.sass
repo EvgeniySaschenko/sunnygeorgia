@@ -1,0 +1,96 @@
+.banner
+	&_top
+		display: flex
+		padding: 30px
+		background-color: #fff
+		margin-bottom: 15px
+		@media #{$phone}
+			flex-wrap: wrap
+		.banner
+			&__text
+				&_1
+					font-size: 36px
+					padding-right: 60px
+					text-transform: uppercase
+				&_2
+					font-size: 24px
+					span
+						font-size: 18px
+						padding-left: 5px
+			@media #{$phone}
+				&__text
+					width: 100%
+					&_1
+						padding-right: 0
+						margin-bottom: 10px
+
+	&_bottom
+		text-align: center
+		border-top: 2px solid $gray-light
+		.banner
+			&__row
+				display: flex
+				@media #{$tablet}
+					flex-wrap: wrap
+			&__col
+				&_1
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					flex: 1
+					border-right: 2px solid $yellow
+					border-left: 2px solid $gray-light
+					padding: 10px 0
+					@media #{$tablet}
+						border: 0
+				&_2
+					display: flex
+					flex-wrap: wrap
+					flex: 2
+					padding: 10px 0
+					@media #{$tablet}
+						margin-bottom: 15px
+					.banner
+						&__name
+							width: 100%
+						&__box
+							width: 33.33%
+							border-right: 2px solid $gray-light
+							display: flex
+							flex-direction: column
+							justify-content: space-between
+							&:last-child,
+							&:first-child
+								border-right: 0
+				&_3
+					flex: 2
+				@media #{$tablet}
+					flex: none
+					width: 100%
+			&__price
+				font-size: 30px
+				font-weight: 700
+				@media #{$tablet}
+					color: $green
+				&_all-inclusive
+					color: $green
+			&__name
+				font-size: 26px
+				font-weight: 700
+				margin-bottom: 20px
+			&__type
+				padding-bottom: 10px
+			&__btn
+				height: 100%
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: $yellow
+				font-size: 26px
+				font-weight: 700
+				padding: 15px 0
+				transition: .3s
+				&:hover
+					background-color: #ffb600
+					transition: .3s

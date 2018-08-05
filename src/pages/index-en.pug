@@ -1,0 +1,208 @@
+extends ../layout/root-en
+
+block title 
+	title Sunnygeorgia
+block meta_d 
+	meta(name="description" content="In this excursion you will see the beauty of mountainous Ajara, famous waterfall Makhuntseti and an old bridge built in the time of Queen Tamara (thousand years). Then we will visit a wine house, where will be having traditional lunch/dinner and Wine degustation made local grapes.")
+block meta_og_title
+	meta(property="og:title" content="Sunnygeorgia")
+block meta_og_type
+	meta(property="og:type" content="website")
+block meta_og_description
+	meta(property="og:description" content="In this excursion you will see the beauty of mountainous Ajara, famous waterfall Makhuntseti and an old bridge built in the time of Queen Tamara (thousand years). Then we will visit a wine house, where will be having traditional lunch/dinner and Wine degustation made local grapes.")
+block meta_og_url
+	meta(property="og:url" content="http://excursion-vodopad.sunnygeorgia.travel/en")
+block meta_og_image
+	meta(property="og:image" content="http://excursion-vodopad.sunnygeorgia.travel/en/img/slide-2.jpg")
+
+block main
+	+b.content
+		+e.row_1
+			.container
+
+				+b.banner_top
+					+e.text_1 Tour:
+					+e.text_2 Adzharia mountains waterfall, Queen Tamara Bridge  and lunch at the wine house <br>
+						I.icon.icon-location
+						SPAN Batumi
+
+			// slider
+			+b.slider_top
+				.swiper-wrapper
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-1.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-2.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-3.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-4.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-5.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-6.jpg").img
+					+e.item.swiper-slide
+						+e.IMG(src="img/slide-7.jpg").img
+				+e.pagination
+
+			.container
+				// form_callback
+				+b.FORM(method="POST" data-lang="en").form_callback#form_callback
+					+e.item
+						+e.title Contact us:
+					+e.item
+						+e.INPUT.field(name="name" placeholder="Name*" required="required")
+					+e.item
+						+e.INPUT.field(name="phone" placeholder="Phone*" required="required")
+					+e.item
+						+e.INPUT.btn(type="submit" value="Send request").btn_send
+
+			// tab
+			+b.tab_en
+				+e.list.container
+					+e.item(data-id="tab_1").active Description
+					+e.item(data-id="tab_2") Details
+					+e.item(data-id="tab_3") Route
+				+e.box-content
+					+e.content(id="tab_1").active
+						+b.text-box_description.container
+							+e.item
+								+e.P.text In this excursion you will see the beauty of mountainous Ajara, famous waterfall Makhuntseti and an old bridge built in the time of Queen Tamara (thousand years). Then we will visit a wine house, where will be having traditional lunch/dinner and Wine degustation made local grapes.
+
+							+e.item
+								+e.name THE BEGINNING OF THE TOUR
+								+e.mark
+								+e.P.text The tour starts in the old Batumi (intersection V. Pshavela and M. Abashidze 50), if You leave nearby, you can walk straight  to the gathering place. If not, we will be able to pick you up from Your location.
+
+							+e.item
+								+e.name 1st STOP
+								+e.mark
+								+e.P.text Then we will head to  famous Ajarianroad towards the village of Keda. Only in 20 minutes after departure you'll be able to see an amazing view of mountain  serpentine. First stop: The Makhuntseti Waterfall (height of about 30 meters). Within a 5-minute walk from the bridge there will be Bridge  of Queen Tamara (dated ~11 century  and 29 metres long). You can make great  pictures and purchase various tradidtional Souvenirs, honey, etc.
+
+							+e.item
+								+e.name 2nd STOP 
+									+e.SPAN.name_explanation (FOR ALL INCLUSIVE TRIPS)
+								+e.mark
+								+e.P.text Next, we will be heading to a private estate - Shervashidze Wine House, which located among the mountains of Adjara. Beautiful sightseeing  and the hospitality of the owners will not leave you indiferrent . You will be able to taste local wines and  dishes of the Georgian and Ajarian cuisine. Here you will be able to purchase wine from local grapes and famous local drink called “Chacha”.
+
+							+e.item
+								+e.name Extra
+								+e.mark
+								+e.P.text At  Shervashidze Wine House there will be  a “Zip Line” 160 meters Long. ( Rope  that is suspended above an incline to which a pulley and harness will be attached to you. The incline allows you  to be pulled by gravity along the line.) If you want you can fly with above the vineyards for 5 GEL.
+								+e.P.text The tour ends at Europe square, in the centre of Batumi.
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Express
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name All Inclusive
+										+e.box
+											+e.type Adults:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Children under 12:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Children under 6:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-1") Book Now
+
+					+e.content(id="tab_2")
+						+b.text-box_details.container
+							+e.item_mod-1
+								+e.name DETAILS:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item The start of the tour : M. Abashidze Stree, 50 or we can l pick you up from your hotel
+									+e.LI.list-item “All inclusive” Tour is available for groups of 5 persons ( maximum 9 persons)
+									+e.LI.list-item Duration: 3.5-5 hours
+									+e.LI.list-item Tour “Express” Available - 10 persons ( maximum 18 persons)
+									+e.LI.list-item Length of route: 90 km
+
+							+e.item
+								+e.name TRANSFER:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Comfortable Mercedes-Benz Sprinter with air conditioning
+
+							+e.item
+								+e.name THE PRICE INCLUDES:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Transfer
+									+e.LI.list-item Lunch and wine tasting at the wine house (only for trips - “All inclusive”)
+									+e.LI.list-item Water 0.5 l per person
+									+e.LI.list-item Internet Connection during road trip
+									+e.LI.list-item Charger for Android/iPhone
+									+e.LI.list-item Great mood!
+
+							+e.item
+								+e.name EXCLUDED:
+								+e.mark_alert
+								+e.UL.list
+									+e.LI.list-item Zipline
+
+							+e.item
+								+e.name LUNCH MENU:
+								+e.mark
+								+e.UL.list
+									+e.LI.list-item Trout, kebabs, chicken
+									+e.LI.list-item Eggplant with nuts
+									+e.LI.list-item Khachapuri
+									+e.LI.list-item Dashora and sinori (Adjarian dish)
+									+e.LI.list-item Fries
+									+e.LI.list-item Salad owith cucumbers and tomatoes
+									+e.LI.list-item Bread, cheese, Vegetables, tkemali sauce, mchadi (bread made of corn), coffee
+									+e.LI.list-item Wine tasting: Chkhaveri, Ojaleshi, Tsolikauri, Dimbula, chacha.
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Express
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name All Inclusive
+										+e.box
+											+e.type Adults:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Children under 12:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Children under 6:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-2") Book Now
+
+
+					+e.content(id="tab_3")
+						+b.map
+							+e.IFRAME.iframe(src="https://www.google.com/maps/embed?pb=!1m30!1m8!1m3!1d190853.8607586013!2d41.6355079!3d41.632152!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x40678ab6ad650edd%3A0xa830ec130a4957a!2z0JLQuNC90L3Ri9C5INC_0L7Qs9GA0LXQsSDQqNC10YDQstCw0YjQuNC00LfQtSwgUGlydmVsaSBNYWlzaSwg0JPRgNGD0LfQuNGP!3m2!1d41.5885736!2d41.875042099999995!4m5!1s0x40678ad49a3aeb9d%3A0x6aad0f6d0ed6d203!2z0JLQvtC00L7Qv9Cw0LQg0JzQsNGF0YPQvdGG0LXRgtC4LCDQk9GA0YPQt9C40Y8!3m2!1d41.574895!2d41.8583393!4m5!1s0x40678640924393b9%3A0x9fdf92bcbc8b6f5b!2z0JzQtdC00LXRjywgQmF0dW1pLCDQk9GA0YPQt9C40Y8!3m2!1d41.651219!2d41.6364647!5e0!3m2!1sru!2sua!4v1530834854067")
+
+						+b.banner_bottom
+							.container
+								+e.row
+									+e.col_1
+										+e.name Express
+										+e.box
+											+e.price_express $10
+									+e.col_2
+										+e.name All Inclusive
+										+e.box
+											+e.type Adults:
+											+e.price_all-inclusive $28
+										+e.box
+											+e.type Children under 12:
+											+e.price_all-inclusive $25
+										+e.box
+											+e.type Children under 6:
+											+e.price_all-inclusive $16
+									+e.col_3
+										+e.BUTTON.btn(id="btn_modal-send-order-3") Book Now

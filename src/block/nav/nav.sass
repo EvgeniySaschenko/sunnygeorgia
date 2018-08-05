@@ -1,0 +1,58 @@
+.nav
+	&__list
+		display: flex
+	&__link
+		color: #fff
+		&:visited
+			color: #fff
+		&:hover
+			color: $yellow
+	&__item
+		&.active
+			.nav__link
+				color: $yellow
+
+	&_header
+		@media #{$phone}
+			padding-top: 10px
+		.nav
+			&__item
+				padding: 0 12px
+				@media #{$phone}
+					padding: 0 8px
+
+	&_footer
+		.nav
+			&__item
+				width: 50%
+				line-height: 1.5
+				@media #{$tablet}
+					width: 33%
+					@media (max-width: 400px)
+						width: 50%
+			&__list
+				flex-wrap: wrap
+//
+	@media #{$tablet}
+		.nav
+			&_header
+				position: absolute
+				top: 0
+				right: 0
+				width: 100%
+				z-index: 1000
+				&.active
+					padding-bottom: 50px
+					padding-top: 40px
+					background-color: rgba(0, 0, 0, .7)
+					.nav
+						&__list
+							display: flex
+							flex-wrap: wrap
+						&__item
+							width: 100%
+							text-align: center
+							padding-top: 20px
+				.nav
+					&__list
+						display: none

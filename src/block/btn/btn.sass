@@ -1,0 +1,82 @@
+.btn
+	cursor: pointer
+	&_burger-header
+		display: none
+		align-items: center
+		justify-content: center
+		height: 50px
+		width: 50px
+		cursor: pointer
+		position: relative
+		z-index: 1001
+		box-sizing: border-box
+		background-color: rgba($yellow, 1)
+		transition-duration: 0.3s
+		border: 2px solid rgba($yellow, .8)
+		@media #{$tablet}
+			display: flex
+		&:hover
+			background-color: rgba($yellow, .8)
+		.btn
+			&__item
+				position: absolute
+				width: 80%
+				height: 5px
+				background-color: #fff
+				&::after,
+				&::before
+					position: absolute
+					content: ""
+					display: block
+					width: 100%
+					height: 5px
+					background-color: #fff
+				&::after
+					top: -12px
+				&::before
+					top: 12px
+		&.active
+			background-color: transparent
+			overflow: hidden
+			.btn
+				&__item
+					width: 60%
+					background-color: transparent
+					&::before,
+					&::after
+						background-color: $yellow
+						transition-duration: 0.3s
+					&::after
+						top: 0
+						transform: rotate(45deg)
+					&::before
+						top: 0
+						transform: rotate(-45deg)
+
+
+	&_send
+		text-align: center
+		max-width: 260px
+		width: 100%
+		background-color: $yellow
+		padding: 15px 0
+		font-size: 16px
+		font-weight: bold
+		display: inline-block
+		transition: .3s
+		@media #{$phone}
+			max-width: 100%
+		&:hover
+			background-color: #ffb600
+			transition: .3s
+	
+	&_form-add-comment
+		font-size: 24px
+		text-align: center
+		width: 100%
+		padding: 15px 0
+		background-color: $gray-light
+		transition: .3s
+		&:hover
+			background-color: $gray-light * 0.9
+			transition: .3s
