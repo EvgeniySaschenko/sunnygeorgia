@@ -2,6 +2,6 @@
 * **gulp** - запуск
 
 * Что использовалось: JQuery, JavaScript, SASS, PUG, Gulp, BEM
-* Функционал: псевдо "Отзывы" (запись в localStorage)
+* Функционал:  "Отзывы"
 * Работа: верстка по макету
 * Ссылка на сайт: https://evgeniysaschenko.github.io/sunnygeorgia/
